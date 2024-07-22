@@ -1,4 +1,4 @@
-#﻿# HPTU Exam Helper Forum
+## HPTU Exam Helper Forum
 
 Welcome to the HPTU Exam Helper Forum! This repository is dedicated to providing a platform for students to contribute articles related to their BTech syllabus for the [HPTU Exam Helper](https://hptuexamhelper.in/) site.
 
