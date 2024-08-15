@@ -1,0 +1,491 @@
+## What is Inductor?
+An inductor is an inactive element found in most power electronic circuits that stores energy in the form of magnetic energy when electricity is delivered to it. 
+One of an inductor's key qualities is that it hinders or opposes any change in the quantity of current passing through it. 
+Whenever the current across the inductor changes, it either gains or loses charge in order to balance the current running through it. 
+The inductor is also known as a choke, reactor, or simply a coil.
+
+Inductance is directly proportional to the number of turns in the coil. 
+It also depends on other things such as the radius of the coil and the type of material around which the coil is wound.
+
+Inductor is made of a wire whose property is inductance, i.e. it opposes the flow of current. 
+The inductance of the wire increases when the number of turns is increased. 
+Inductance is represented by the alphabet ‘L’ and it is measured in **Henry**. 
+The formula of Inductance can be given by the ratio of flux and the current in the circuit. It is represented as:
+```math
+L = \frac{\Phi}{I} 
+```
+where:
+- $L$ is the inductance (in henries, H),
+- $\Phi$ is the magnetic flux (in webers, Wb),
+- $I$ is the current (in amperes, A).
+
+Inductors have two basic functions:
+1. **To control signals:**
+   Controlling signals is one of the primary functions of an inductor. 
+   It is used to handle electric or digital signals to get specific results, like changing frequency and filtering them.
+   The frequency of the current passing in an inductor plays a vital role in controlling the signals within an inductor. 
+   It is helpful in blocking AC and allows the DC to pass through it. 
+   This is possible because higher frequency symbols are passed easily inside an inductor thus allowing DC currents to pass through them easily..
+
+2. **To store energy:**
+   In an inductor, the core is used to store energy. Inductors store energy in the form of magnetic fields. 
+   Energy storage is the process of adding and maintaining power to a system or gadget for future use. 
+   This aids in managing, balancing, and controlling the energy consumption of many systems, including buildings and automobiles..
+
+
+#### Inductors in Series:
+The inductor in Series refers to the network of inductors connected end-to-end so that there is only one path for the flow of electric current. 
+The current flowing in each inductor remains the same but the voltage drop in each inductor is different.
+
+When inductors are put together end-to-end in an electrical circuit, their individual amount of inductance add up to make one total degree of induction. 
+This means that all the inductors connecting together in a series make a stronger impact than any one inductor alone.
+
+[![inductor in series](https://i.postimg.cc/D0QL6LFw/inds.png)](https://i.postimg.cc/D0QL6LFw/inds.png)
+
+We know that in series the current is equal in each branch. That is,
+```math
+ I_T = I_1 = I_2 = \ldots = I_n 
+```
+Total voltage in the circuit is given by:
+```math
+ V_T = V_1 + V_2 + \ldots + V_n 
+```
+We know that the formula for voltage across an inductor is given by,
+```math
+ V = L \frac{di}{dt} 
+```
+we can write,
+```math
+ V_T = L_T \frac{di}{dt}
+```
+```math
+ L_T \frac{dI_T}{dt} = L_1 \frac{dI_1}{dt} + L_2 \frac{dI_2}{dt} + \ldots + L_n \frac{dI_n}{dt} 
+```
+But here, $I_T = I_1 = I_2 = \ldots = I_n$
+
+So, the equation reduces to
+```math
+ L_T \frac{dI_T}{dt} = (L_1 + L_2 + \ldots + L_n) \frac{dI_T}{dt} 
+```
+Hence, the total inductance is given by $L_T = L_1 + L_2 + \ldots + L_n$
+
+#### Inductors in Parallel:
+Inductors in parallel are the network of inductors that are connected together with the same two nodes in a circuit. 
+When connected in parallel the voltage across each inductor remains the same, however, the current in each inductor will be different. 
+The maximum opposing inductor will receive the minimum current.
+
+The total inductance of all the inductors connected in parallel will always be less than the individual inductance present in the circuit. 
+The total current in the circuit is the sum of current in each inductor. 
+The total inductance in the circuit increases or decreases according to the amount of magnetic coupling between the coils.
+
+
+[![inductor in parallel](https://i.postimg.cc/KYdTyJ8Y/indp.png)](https://i.postimg.cc/KYdTyJ8Y/indp.png)
+
+
+The total current in the circuit is given by:
+
+```math
+ I_T = I_1 + I_2 + I_3 + \ldots + I_n 
+```
+We know that the formula for voltage across an inductor is given by,
+```math
+ V = L \frac{di}{dt} 
+```
+we can write,
+```math
+ V_T = L_T \frac{di}{dt} 
+```
+```math
+ V_T = L_T \frac{d(I_1 + I_2 + \ldots + I_n)}{dt} 
+```
+```math
+ V_T = L_T \left( \frac{dI_1}{dt} + \frac{dI_2}{dt} + \ldots + \frac{dI_n}{dt} \right) 
+```
+Substituting $V / L$ in place of $di/dt$, we get
+```math
+ V_T = L_T \left( \frac{V}{L_1} + \frac{V}{L_2} + \ldots + \frac{V}{L_n} \right) 
+```
+Therefore, we know $V_T = V$, and the equation reduces to
+```math
+ \frac{1}{L_T} = \frac{1}{L_1} + \frac{1}{L_2} + \ldots + \frac{1}{L_n} 
+ ```
+#### Energy Stored in an Inductor:
+When electric current flows through an inductor, electrical energy is stored in it. An inductor stores this electrical energy in the form of magnetic energy. 
+The amount of electrical energy an inductor can store depends on its inductance and the magnitude of the electric current flowing through it.
+The following formula can determine the electrical energy stored by an inductor.
+```math
+E = \frac{LI^2}{2}
+```
+where,
+- E is Amount of Stored Energy
+- L is Inductance of Inductor
+- I is Electric Current Flowing in Inductor
+
+### Inductor Energization
+When a voltage is applied across an inductor, the current through the inductor does not immediately reach its maximum value. 
+Instead, it increases gradually due to the inductor's property of opposing changes in current. 
+This process is governed by the following key concepts:
+1. **Inductance(L):** The property of the inductor that quantifies its opposition to changes in current. It is measured in henries (H).
+2. **Induced EMF:** According to Faraday's Law, a changing current through the inductor induces a voltage (EMF) across it, given by:
+   ```math
+   v_L = L\frac{dI}{dt}
+   ```
+3. **Time Constant(τ):**  For an RL circuit (resistor R and inductor L in series), the time constant is:
+   ```math
+    \tau = \frac{L}{R}
+   ```
+4. **Current Growth:** The current I(t) through the inductor as a function of time t when a constant voltage V is applied is given by:
+   ```math
+    I(t) = \frac{V}{R}(1 - e^{-\frac{t}{τ}})
+   ```
+   where:
+   - V is the applied voltage,
+   - R is the resistance in the circuit,
+   - τ is the time constant $(\frac{L}{R})$
+
+### Inductor De-energization
+
+When the voltage across an energized inductor is removed, the current through the inductor does not immediately drop to zero. 
+Instead, it decreases gradually, again due to the inductor's opposition to changes in current. 
+This process involves:
+**Current Decay:** The current I(t) through the inductor as a function of time t after the voltage source is removed is given by:
+   ```math
+   I(t) = I_0e^{-\frac{t}{τ}}
+   ```
+   where:
+   - $I_0$ is the initial current through the inductor at the moment the voltage is removed,
+   - τ is the time constant $\frac{L}{R}$
+
+### Voltage-Current Relationship for an Inductor
+The voltage $V_L$ across an inductor L is directly proportional to the rate of change of current I through it. 
+This relationship can be written as:
+```math
+V_L = L(\frac{dI}{dt})
+```
+where:
+- $V_L$ is the voltage across the inductor,
+- L is the inductance in henries (H),
+- $\frac{dI}{dt}$ is the rate of change of current through the inductor.
+
+**Explanation**
+1. **Inductance (L):** Inductance is a measure of an inductor's ability to store energy in its magnetic field and oppose changes in current. 
+It is dependent on the physical characteristics of the inductor, such as the number of turns in the coil, the area of the coil, and the core material. 
+
+2. **Rate of Change of Current $(\frac{dI}{dt})$:** This term represents how quickly the current through the inductor is changing with respect to time. 
+A rapid change in current induces a larger voltage across the inductor.
+
+### Time-Constant
+
+**Time constant** of the circuit is the time that would be required for the current to drop to zero if it continued to drop at its initial rate.
+It is designated by Greek letter $\tau$(tau)
+
+[![time constant](https://i.postimg.cc/ryGrvGX8/ttc.png)](https://i.postimg.cc/ryGrvGX8/ttc.png)
+
+The initial rate of decay is given by the slope of line AB drawn tangential to the curve at starting point B.
+It is found by evaluating the derivative at zero time,
+```math
+\frac{d}{dt} \left( i(t)/I_0 \right) \bigg|_{t=0} = -\frac{R}{L} e^{-Rt/L} \bigg|_{t=0} = -\frac{R}{L} \tag{i}
+```
+Thus, from triangle OAB, we have
+```math
+\tan \theta = \frac{1}{\tau} \implies \frac{1}{\tau} = \frac{R}{L} \text{ or } \tau = \frac{L}{R} \tag{ii}
+```
+Since the exponent $-Rt/L$ must be dimensionless, the ratio $L/R$ must have the units of seconds. 
+In terms of time constant $\tau$, the response of the series $RL$ circuit may be written simply as
+```math
+i(t) = I_0 e^{-t/\tau} \tag{iii}
+```
+
+The time constant for an inductor (τ) is defined as the ratio of the inductance (L) to the resistance (R) in an RL (resistor-inductor) circuit.
+It quantifies how quickly the current through the inductor changes in response to changes in the circuit conditions, particularly when the circuit is energized or de-energized.
+
+**Time Constant Formula:**
+In an RL circuit, the time constant τ is given by:
+```math
+τ = \frac{L}{R}
+```
+where:
+- L is the inductance of the inductor in henries (H),
+- R is the resistance in ohms (Ω).
+
+
+
+**Understanding the time constant of an inductor is crucial in various applications:**
+- Transient Response: It helps in predicting how quickly the current in an RL circuit will settle to its final value when a voltage is applied or removed.
+- Circuit Design: Designers use the time constant to optimize the performance of circuits involving inductors, such as filters, oscillators, and power supplies.
+- Signal Processing: In signal processing applications, the time constant influences the response time of circuits to changes in input signals.
+
+
+## Transient Response of RL, RC and RLC Circuits
+### Transient Response of RL Circuits
+
+<Tabs items={["Engineering Funda", "Last moment tuitions" ]}>
+
+<Tabs.Tab>
+<iframe 
+  src="https://www.youtube.com/embed/Vb_OFPpynpg?si=Jh9rNAhZFLUxer_u"  
+  loading="lazy"
+  class="w-full h-64 sm:h-[26rem] md:h-128 lg:h-144 xl:h-160 2xl:h-192"
+  allowFullScreen
+/>
+</Tabs.Tab>
+
+<Tabs.Tab>
+<iframe
+  src="https://www.youtube.com/embed/2s2c0dIVwrw?si=ciDuuJYQ12QvaQyA"
+  allowFullScreen
+  class="w-full h-64 sm:h-[26rem] md:h-128 lg:h-144 xl:h-160 2xl:h-192"
+  loading="lazy"
+/>
+</Tabs.Tab>
+
+</Tabs>
+
+<Callout type ="info">
+Topic asked in Basic Electrical Engg [2023 (CBCS/NEP)](https://hptuexamhelper.in/question_papers/basic_electrical_engg_ques_paper) question paper Section B - 4(ii).
+</Callout>
+
+
+[![rl](https://i.postimg.cc/GmXNzshK/rl.png)](https://i.postimg.cc/GmXNzshK/rl.png)
+
+**Case-I:**  **t < 0 [Switch at position A]**
+
+Once inductor is completely energised it will act as short circuit.
+
+Apply KVL in loop:
+```math
+ V = IR \implies I = \frac{V}{R}
+```
+
+**Case-II:**  **t = 0 [Switch at position B]**
+
+When switch moves to position B, inductor releases its energy.
+
+Apply KVL in loop:
+```math
+V_R + V_L = 0
+```
+```math
+IR + L\frac{dI}{dt} = 0
+```
+```math
+L\frac{dI}{dt} = -IR 
+```
+```math
+\frac{dI}{I} = -(\frac{R}{L}) dt \tag{i}
+```
+Intergrating Eq.(i) we get,
+```math
+ln I = -(\frac{R}{L})t + K
+```
+```math
+ln I = -(\frac{R}{L})t + ln K
+```
+```math
+ln I - ln K = -(\frac{R}{L})t 
+```
+```math
+ln \frac{I}{K} = -(\frac{R}{L})t 
+```
+Therefore,
+```math
+I = K e^{-(\frac{R}{L})t} \tag{ii}
+```
+At t = 0, $I = \frac{V}{R}$ putting this in Eq.(ii) we get,
+```math
+\frac{V}{R} = K e^0
+```
+```math
+K = \frac{V}{R} \tag{iii}
+```
+Substituting value of K in Eq.(ii), 
+```math
+I = \frac{V}{R} e^{-(\frac{R}{L})t}
+```
+Therefore Time response of current in RL circuit is given by:
+```math
+I = \frac{V}{R} e^{-(\frac{R}{L})t}
+```
+
+The transient response of RL (resistor-inductor) circuits describes how these circuits behave when a sudden change in voltage or current occurs. 
+Understanding this response is crucial for designing and analyzing RL circuits in various applications, including power supplies, motor control circuits, and signal filtering.
+
+**RL Circuit Components:**
+An RL circuit consists of:
+
+- R: Resistor (in ohms, Ω), which limits the current.
+- L: Inductor (in henries, H), which stores energy in its magnetic field.
+
+**Time Constant (τ):**
+The time constant τ of an RL circuit is given by:
+```math
+τ = \frac{L}{R}
+```
+ where:
+- L is the inductance of the inductor.
+- R is the resistance in the circuit.
+
+The time constant τ determines the rate at which the current through the inductor changes in response to changes in the circuit conditions.
+
+When a sudden change in voltage or current is applied to an RL circuit, the current through the inductor and the voltage across it change over time.
+
+### Transient Response of RC Circuits
+<Tabs items={["Engineering Funda", "Last moment tuitions" ]}>
+
+<Tabs.Tab>
+<iframe 
+  src="https://www.youtube.com/embed/YQ1FZb7K_gs?si=eFp4FswKbUZ13S-o"  
+  loading="lazy"
+  allowFullScreen
+  class="w-full h-64 sm:h-[26rem] md:h-128 lg:h-144 xl:h-160 2xl:h-192"
+/>
+</Tabs.Tab>
+
+<Tabs.Tab>
+<iframe
+  src="https://www.youtube.com/embed/YTrAxnMQbhE?si=u9CEbX5gScaGc1aQ"
+  allowFullScreen
+  loading="lazy"
+  class="w-full h-64 sm:h-[26rem] md:h-128 lg:h-144 xl:h-160 2xl:h-192"
+/>
+</Tabs.Tab>
+
+</Tabs>
+
+<Callout type ="info">
+Topic asked in Basic Electrical Engg [2023 (CBCS/NEP)](https://hptuexamhelper.in/question_papers/basic_electrical_engg_ques_paper) question paper Section B - 3.
+</Callout>
+
+[![rc](https://i.postimg.cc/3JBbJDph/rc.png)](https://i.postimg.cc/3JBbJDph/rc.png)
+
+**Case-I:**  **t < 0 [Switch at position 1]**
+
+Once completely charged capacitor will act as a open circuit.
+
+**Case-II:**  **t = 0 [Switch at position 2]**
+
+When the capacitor gets discharged, it reverses the direction of current 
+
+[![rc2](https://i.postimg.cc/XvFfqTh5/rc2.png)](https://i.postimg.cc/XvFfqTh5/rc2.png)
+
+Apply KVL in loop:
+```math
+V_C + V_R = 0
+```
+```math
+ \frac{1}{C} \int I dt  + IR = 0 \tag{i}
+```
+Differentiation Eq.(i)
+```math
+ \frac{I}{C} + R\frac{dI}{dt} = 0
+```
+```math
+ R\frac{dI}{dt} = - \frac{I}{C}
+```
+```math
+ \frac{dI}{dt} = - (\frac{I}{RC})dt \tag{ii}
+```
+Integrating Eq.(ii), we get,
+```math
+ln I = - (\frac{I}{RC})t + K
+```
+```math
+ln I = - (\frac{I}{RC})t + ln K
+```
+```math
+ln I - ln K = - (\frac{I}{RC})t
+```
+```math
+ln \frac{I}{K} = - (\frac{t}{RC})
+```
+```math
+I = K e^{(\frac{-t}{RC})} \tag{iii}
+```
+At t = 0, $I = \frac{V}{R}$ putting this in Eq.(iii) we get,
+```math
+\frac{V}{R} = K e^0 
+```
+```math
+\implies K = \frac{V}{R} 
+```
+Hence,
+```math
+I = \frac{V}{R} e^{(\frac{-t}{RC})} 
+```
+Therefore Time response of current in RC circuit is given by:
+
+```math
+I = \frac{V}{R} e^{(\frac{-t}{RC})} 
+```
+
+The transient response of RC (resistor-capacitor) circuits describes how these circuits behave when subjected to sudden changes in voltage or current. 
+RC circuits are fundamental in electronics and find applications in signal processing, timing circuits, filters, and many other areas. 
+Understanding their transient response is crucial for designing and analyzing these circuits effectively.
+
+**RC Circuit Components:**
+- R: Resistor (in ohms, Ω), which limits the current.
+- C: Capacitor (in farads, F), which stores and releases electrical energy.
+
+**Time Constant (τ):**
+The time constant τ of an RC circuit is defined as:
+```math
+τ=RC
+```
+where:
+- R is the resistance in the circuit.
+- C is the capacitance of the capacitor.
+
+The time constant τ dictates how quickly the capacitor charges or discharges through the resistor in response to changes in the circuit conditions.
+
+When a sudden change in voltage or current is applied to an RC circuit, the voltage across the capacitor and the current through the resistor change over time.  
+
+### Transient response of RLC Circuits
+<Tabs items={["Roy Knowledge", "Last moment tuitions" ]}>
+
+<Tabs.Tab>
+<iframe 
+  src="https://www.youtube.com/embed/ZigUUCw4754?si=cbsfuTYH4K--aoa9"  
+  loading="lazy"
+  allowFullScreen
+  class="w-full h-64 sm:h-[26rem] md:h-128 lg:h-144 xl:h-160 2xl:h-192"
+/>
+</Tabs.Tab>
+
+<Tabs.Tab>
+<iframe
+  src="https://www.youtube.com/embed/M4m38kapcmg?si=efL_sF3mInxBDy5a"
+  allowFullScreen
+  loading="lazy"
+  class="w-full h-64 sm:h-[26rem] md:h-128 lg:h-144 xl:h-160 2xl:h-192"
+/>
+</Tabs.Tab>
+
+</Tabs>
+The transient response of RLC (resistor-inductor-capacitor) circuits describes how these circuits behave when subjected to sudden changes in voltage or current. 
+RLC circuits are fundamental in electronics and are used in various applications such as filters, oscillators, and signal processing circuits. 
+Understanding their transient response is crucial for designing and analyzing these circuits effectively.
+
+**RLC Circuit Components:**
+- R: Resistor (in ohms, Ω), which limits the current.
+- L: Inductor (in henries, H), which stores energy in its magnetic field.
+- C: Capacitor (in farads, F), which stores and releases electrical energy.
+
+**Time Constant (τ)and Natural Frequency $(ω_0)$:**
+The transient response of an RLC circuit is influenced by two key parameters:
+1. Time Constant (τ):
+   - The time constant of an RLC circuit depends on the damping factor and is typically defined in terms of the resistance R, inductance L, and capacitance C.
+   - For an underdamped RLC circuit (where $R < 2\sqrt{\frac{L}{C}}$),the time constant τ is approximately:
+     ```math
+      \tau \approx \frac{1}{\sqrt{\frac{1}{LC} - \left(\frac{R}{2L}\right)^2}}
+     ```
+2. Natural Frequency $(ω_0)$:
+   - The natural frequency of oscillation of the RLC circuit is given by:
+     ```math
+      \Omega_0 = \frac{1}{\sqrt{\frac{1}{LC}}}
+     ```
+   - In the context of an RLC circuit, ζ (zeta) represents the damping factor. It's a dimensionless quantity that characterizes how the energy in the circuit's oscillations dissipates over time due to the presence of resistance.
+     The damping factor for a series RLC circuit is calculated as:
+     $\zeta = \frac{R}{2 \sqrt{\frac{L}{C}}}$
+      - Underdamped $(ζ< 1)$: Oscillatory response.
+      - Critically Damped $(ζ=1)$: Fastest response to steady state without oscillation.
+      - Overdamped $(ζ > 1)$: No oscillation, slower response to steady state.
